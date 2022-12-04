@@ -1,0 +1,16 @@
+<% layout('/layout/boilerplate2.ejs')%>
+        <div class="row expert d-flex justify-content-between">
+        <% for (b of blogs){%>
+          <div class="col-sm-3 ">
+            <div class="card my-2 mx-2 " style="width: 18rem; background-color:black; height: 350px;">
+              <img src="<%=b.image.url%>" class="card-img-top" alt="Advisor 2 picture">
+              <div class="card-body">
+                <h5 class="card-title text-light"><%=b.title %> </h5>
+                <p class="card-text text-light">Author:<%=b.authorClient.fullname %>  </p>
+                <a href="/blog/<%=b._id%> " class="btn btn-primary">Read more</a>
+            </div>
+            </div>
+          </div>
+          <%}%>
+        </div>
+    
